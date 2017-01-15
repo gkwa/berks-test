@@ -1,0 +1,27 @@
+* berks-test
+** is this a berks v2.0 versus v1.0 api problem
+
+http://berkshelf.com/v2.0/
+
+** googling
+
+berks install
+
+** chef policyfile install test
+
+#+BEGIN_SRC sh
+rm -rf ~/.berkshelf/coo*/elasticsearch* ~/.chefdk/cache/coo*/elasticsearch* Berksfile.lock Policyfile.lock.json
+cat ~/.chefdk/cache/coo*/elasticsearch*/attributes/default.rb # this should fail
+chef install
+cat ~/.chefdk/cache/coo*/elasticsearch/attributes/default.rb
+#+END_SRC
+
+** berks install test
+
+#+BEGIN_SRC sh
+rm -rf ~/.berkshelf/coo*/elasticsearch* ~/.chefdk/cache/coo*/elasticsearch* Berksfile.lock Policyfile.lock.json
+cat ~/.berkshelf/coo*/elasticsearch*/attributes/default.rb # this should fail
+berks install
+cat ~/.berkshelf/coo*/elasticsearch*/attributes/default.rb
+#+END_SRC
+
