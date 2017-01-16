@@ -1,7 +1,19 @@
 * berks-test
-** is this a berks v2.0 versus v1.0 api problem
+** usage
+
+#+BEGIN_SRC sh
+bats --tap t*.bats
+#+END_SRC
+
+** Q: is this a berks v2.0 versus v1.0 api problem
 
 http://berkshelf.com/v2.0/
+
+A: No, problem here is that if you don't explicity say what cookbook
+source is, then it will default to supermarket.
+
++ https://docs.chef.io/config_rb_policyfile.html
++ http://berkshelf.com/v2.0/
 
 ** googling
 
