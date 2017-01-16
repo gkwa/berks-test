@@ -2,4 +2,4 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'elasticsearch'
+cookbook 'elasticsearch', git: 'https://github.com/elastic/cookbook-elasticsearch', branch: "master"
